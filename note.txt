@@ -1,0 +1,39 @@
+info file user in database :
+    //? username            = admin
+    //? password            = admin
+    //! username            = kasir
+    //! password            = kasir
+    //TODO: username        = King of Tron
+    //TODO: password        = 23451
+    //*username             = rama23
+    //*password             = ramaganteng
+
+
+//! Sesuatu
+1rama231@S
+
+
+<div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th style="width: 5%;">No </th>
+                            <th>Username</th>
+                            <th>keterangan</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php $no = 1;
+                        foreach($row->result() as $key => $data) { ?>
+                        <tr>
+                            <td><?=$no++?>.</td>
+                            <td><?=ucfirst($data->username)?></td>
+                            <td><?=ucfirst($data->keterangan)?></td>
+                            <td><?=$data->waktu?></td>
+                        </tr>
+                        <?php
+                        } ?>
+                    </tbody>
+                </table>
+            </div>
